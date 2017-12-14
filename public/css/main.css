@@ -1,0 +1,261 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+}
+.top {
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    position:absolute;
+    top:0;
+}
+.fleft {
+    float: left;
+}
+.w200 {
+    width: 200px;
+}
+.control {
+    display: block;
+    float: right;
+    color: #ddd;
+    text-decoration:none;
+}
+.control:hover{
+    color: #fff;
+}
+.control-close {
+    line-height: 50px;
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 14px;
+}
+.control-max {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+}
+.control-min {
+    line-height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+}
+.top-content {
+    width: calc(100% - 400px);
+    height: 50px;
+}
+.foot {
+    width: 100%;
+    height: 50px;
+    background-color: #ddd;
+    position:absolute;
+    bottom:0;
+    border-top: solid 1px rgba(210, 210, 210, 1);
+}
+.cont {
+    width: 100%;
+    position:absolute;
+    top: 50px;
+    bottom: 50px;
+}
+.left-menu {
+    width: 250px;
+    height: 100%;
+    background-color: rgba(244, 245, 245, 0.59);
+    float: left;
+}
+.content {
+    width: calc(100% - 251px);
+    height: 100%;
+    background-color: #fff;
+    float: right;
+    border-left: solid 1px rgba(202, 210, 210, 1);
+}
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #1ebcc5;
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header ul {
+  margin-top: 20px;
+}
+
+.variations {
+  width: 440px;
+  display: inline-block;
+  margin: 20px 0 0;
+}
+.variations li {
+  width: 70px;
+  margin: 15px 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.variations li ul li {
+  margin: 0;
+  text-align: left;
+  display: block;
+}
+
+.mininum {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 50px;
+  overflow: hidden;
+}
+.mininum::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 12px;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #b9b9b9;
+}
+.mininum.black::before{
+  height: 1px;
+  margin-top: -2px;
+}
+.mininum.rounded::before{
+  border-radius: 5px;
+}
+.mininum.black:hover::before{
+  background: #fff;
+}
+
+.maxinum {
+  position: relative;
+  display: inline-block;
+  width: 11px;
+  height: 50px;
+  overflow: hidden;
+}
+.maxinum::before{
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 11px;
+  top: 50%;
+  left: 0;
+  margin-top: 0px;
+  border: solid 1px #b9b9b9;
+}
+.maxinum.black::before{
+  height: 9px;
+  margin-top: -7px;
+}
+.maxinum.rounded::before{
+  border-radius: 2px;
+}
+.maxinum.black:hover::before{
+  border: solid 1px #fff;
+}
+
+.close {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 50px;
+  overflow: hidden;
+}
+.close.black:hover::before, .close.black:hover::after {
+  background: #fff;
+}
+.close::before, .close::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #b9b9b9;
+}
+.close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.close::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.close.big {
+  -webkit-transform: scale(3);
+  -moz-transform: scale(3);
+  -ms-transform: scale(3);
+  -o-transform: scale(3);
+  transform: scale(3);
+}
+.close.hairline::before, .close.hairline::after {
+  height: 1px;
+}
+.close.thick::before, .close.thick::after {
+  height: 4px;
+  margin-top: -2px;
+}
+.close.black::before, .close.black::after {
+  height: 1px;
+  margin-top: -2px;
+}
+.close.heavy::before, .close.heavy::after {
+  height: 12px;
+  margin-top: -6px;
+}
+.close.pointy::Before, .close.pointy::after {
+  width: 200%;
+  left: -50%;
+}
+.close.rounded::before, .close.rounded::after {
+  border-radius: 5px;
+}
+.close.blades::before, .close.blades::after {
+  border-radius: 5px 0;
+}
+.close.warp::before, .close.warp::after {
+  border-radius: 120% 0;
+}
+.close.fat::before, .close.fat::after {
+  border-radius: 100%;
+}
+
+small {
+  display: block;
+  padding: 5rem;
+  font: .8rem/1 sans-serif;
+  color: #777;
+  text-align: center;
+}
+
+small a {
+  color: #1ebcc5;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+}
+
+small a:hover {
+  border-bottom-color: #222;
+}
