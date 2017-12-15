@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get("search", function (){
+    echo Php_Ppython::ppython("netease::get_discover", 1);
+});

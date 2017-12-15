@@ -169,6 +169,39 @@ ul {
   border: solid 1px #fff;
 }
 
+.normal {
+  position: relative;
+  display: inline-block;
+  width: 11px;
+  height: 50px;
+  overflow: hidden;
+}
+.normal::before, .normal::after{
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 11px;
+  top: 50%;
+  left: 0;
+  margin-top: 0px;
+  border: solid 1px #b9b9b9;
+}
+.normal.black::before{
+  height: 9px;
+  margin-top: -9px;
+  margin-left: 2px;
+}
+.normal.black::after{
+  height: 9px;
+  margin-top: -7px;
+}
+.normal.rounded::before, .normal.rounded::after{
+  border-radius: 2px;
+}
+.normal.black:hover::before, .normal.black:hover::after{
+  border: solid 1px #fff;
+}
+
 .close {
   position: relative;
   display: inline-block;
