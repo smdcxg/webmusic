@@ -6,6 +6,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>UhUh'OO</title>
     <link rel="stylesheet" type="text/css" href="./public/css/main.css" media="screen" />
+    
+    <link rel="stylesheet" href="./public/css/accordion-style.css" media="screen" type="text/css" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Optional CSS -->
     <!--link rel="stylesheet" href="./public/css/jquery.typeahead.min.css"-->
  
@@ -21,6 +24,8 @@
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="./public/js/accordion.js" type="text/javascript"></script>
 
     <script src="./public/js/APlayer.min.js"></script>
     <script type="text/javascript">
@@ -137,7 +142,44 @@
     <div class="cont" style="top:0px;bottom:68px">
         <div class="left-menu">
             menu
-            <script type="text/javascript" src="./public/js/audio-player.js"></script>
+            <!-- Contenedor -->
+            <ul id="accordion" class="accordion">
+                <li>
+                    <div class="link"><i class="fa fa-paint-brush"></i>Diseño web<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a href="#">Photoshop</a></li>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">Maquetacion web</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link"><i class="fa fa-code"></i>Desarrollo front-end<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a href="#">Javascript</a></li>
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">Frameworks javascript</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link"><i class="fa fa-mobile"></i>Diseño responsive<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a href="#">Tablets</a></li>
+                        <li><a href="#">Dispositivos mobiles</a></li>
+                        <li><a href="#">Medios de escritorio</a></li>
+                        <li><a href="#">Otros dispositivos</a></li>
+                    </ul>
+                </li>
+                <li><div class="link"><i class="fa fa-globe"></i>Posicionamiento web<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <li><a href="#">Google</a></li>
+                        <li><a href="#">Bing</a></li>
+                        <li><a href="#">Yahoo</a></li>
+                        <li><a href="#">Otros buscadores</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--script type="text/javascript" src="./public/js/audio-player.js"></script>
             <script type="text/javascript">  
             AudioPlayer.setup("http://127.0.0.1/webmusic/public/player.swf", {  
                 width: 290  
@@ -152,7 +194,7 @@
             <script type="text/javascript">  
             AudioPlayer.embed("audioplayer_2", {soundFile: "./public/mp3/test.mp3"});  
             </script>  
-            <object height="100" width="100" data="./public/mp3/test.mp3"></object>
+            <object height="100" width="100" data="./public/mp3/test.mp3"></object-->
         </div>
         <div class="content">content</div>
     </div>
