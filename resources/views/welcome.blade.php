@@ -8,22 +8,22 @@
     <link rel="stylesheet" type="text/css" href="./public/css/main.css" media="screen" />
     
     <link rel="stylesheet" href="./public/css/accordion-style.css" media="screen" type="text/css" />
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./public/css/font-awesome.min.css" rel="stylesheet">
     <!-- Optional CSS -->
     <!--link rel="stylesheet" href="./public/css/jquery.typeahead.min.css"-->
  
     <!-- Required JavaScript -->
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="./public/js/jquery-3.2.1.min.js"></script>
     <!--script src="./public/js/jquery.typeahead.min.js"></script-->
     <script type="text/javascript" src="./public/js/qwebchannel.js"></script>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/bootstrap/css/bootstrap.min.css">
 
     <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/bootstrap/css/bootstrap-theme.min.css">
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="./public/bootstrap/js/bootstrap.min.js"></script>
     
     <script src="./public/js/accordion.js" type="text/javascript"></script>
 
@@ -141,12 +141,12 @@
     </div-->
     <div class="cont" style="top:0px;bottom:68px">
         <div class="left-menu">
-            menu
+            
             <!-- Contenedor -->
             <ul id="accordion" class="accordion">
-                <li>
+                <li class="open">
                     <div class="link"><i class="fa fa-paint-brush"></i>Diseño web<i class="fa fa-chevron-down"></i></div>
-                    <ul class="submenu">
+                    <ul id="test" class="submenu" style="display: block;">
                         <li><a href="#">Photoshop</a></li>
                         <li><a href="#">HTML</a></li>
                         <li><a href="#">CSS</a></li>

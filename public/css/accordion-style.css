@@ -49,7 +49,7 @@
 }
 
 .accordion li:hover {
-  background-color: #e3e3e3;
+  /*background-color: #e3e3e3;*/
 }
 
 .accordion li:last-child .link {
@@ -100,19 +100,25 @@
  	/*border-bottom: 1px solid #4b4a5e;*/
  }
 
+ .submenu .active {
+	background: #d9d9d9;
+	text-decoration:none;
+	color: #444359;
+ }
+
  .submenu a {
  	display: block;
  	text-decoration: none;
  	color: #d9d9d9;
  	padding: 12px;
  	padding-left: 42px;
- 	-webkit-transition: all 0.25s ease;
+ 	/*-webkit-transition: all 0.25s ease;
  	-o-transition: all 0.25s ease;
- 	transition: all 0.25s ease;
+ 	transition: all 0.25s ease;*/
  }
 
  .submenu a:hover {
- 	background: #b63b4d;
- 	color: #FFF;
+	background: #d9d9d9;
+ 	color: #444359;
  }
 
