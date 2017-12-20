@@ -145,16 +145,16 @@
             <!-- Contenedor -->
             <ul id="accordion" class="accordion">
                 <li class="open">
-                    <div class="link"><i class="fa fa-paint-brush"></i>Diseño web<i class="fa fa-chevron-down"></i></div>
-                    <ul id="test" class="submenu" style="display: block;">
-                        <li><a href="#">Photoshop</a></li>
+                    <div class="link"><i class="neteasy-logo neteasy-bg"></i>网易云音乐<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu" style="display: block;">
+                        <li><a href="#"><i class="fa fa-paint-brush"></i>&nbsp;&nbsp;发现音乐</a></li>
                         <li><a href="#">HTML</a></li>
                         <li><a href="#">CSS</a></li>
                         <li><a href="#">Maquetacion web</a></li>
                     </ul>
                 </li>
                 <li>
-                    <div class="link"><i class="fa fa-code"></i>Desarrollo front-end<i class="fa fa-chevron-down"></i></div>
+                    <div class="link"><i class="fa fa-code"></i>酷狗音乐<i class="fa fa-chevron-down"></i></div>
                     <ul class="submenu">
                         <li><a href="#">Javascript</a></li>
                         <li><a href="#">jQuery</a></li>
@@ -162,7 +162,7 @@
                     </ul>
                 </li>
                 <li>
-                    <div class="link"><i class="fa fa-mobile"></i>Diseño responsive<i class="fa fa-chevron-down"></i></div>
+                    <div class="link"><i class="fa fa-mobile"></i>酷我音乐盒<i class="fa fa-chevron-down"></i></div>
                     <ul class="submenu">
                         <li><a href="#">Tablets</a></li>
                         <li><a href="#">Dispositivos mobiles</a></li>

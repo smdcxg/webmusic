@@ -2,11 +2,6 @@
 	list-style-type: none;
 }
 
- .accordion a {
-	color: #b63b4d;
-	text-decoration: none;
-}
-
 /** =======================
  * Contenedor Principal
  ===========================*/
@@ -92,24 +87,29 @@
  -----------------------------*/
  .submenu {
  	display: none;
- 	background: #444359;
- 	font-size: 14px;
+ 	background: rgba(244, 245, 245, 0.59);
+	font-size: 14px;
  }
 
  .submenu li {
  	/*border-bottom: 1px solid #4b4a5e;*/
  }
+ .submenu li i {
+	position: unset;
+	font-size: 18px;
+	color: #595959;
+}
 
- .submenu .active {
-	background: #d9d9d9;
+ .submenu .active a {
+	background: #e9e9e9;
 	text-decoration:none;
 	color: #444359;
  }
 
- .submenu a {
+ .submenu li a {
  	display: block;
  	text-decoration: none;
- 	color: #d9d9d9;
+ 	color: #444359;
  	padding: 12px;
  	padding-left: 42px;
  	/*-webkit-transition: all 0.25s ease;
@@ -118,7 +118,8 @@
  }
 
  .submenu a:hover {
-	background: #d9d9d9;
+	background: #e9e9e9;
+	text-decoration: none;
  	color: #444359;
  }
 

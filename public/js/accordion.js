@@ -24,8 +24,8 @@ $(function() {
 				$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
 			};
 		}else{
-			$this.siblings().removeClass('active');
-			$this.toggleClass('active');
+			$this.parent().parent().parent().find("li").removeClass('active');
+			$this.addClass('active');
 			/*if (!e.data.multiple) {
 				console.log(e.data.multiple);
 			};*/

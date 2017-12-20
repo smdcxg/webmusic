@@ -292,3 +292,16 @@ small a {
 small a:hover {
   border-bottom-color: #222;
 }
+
+.neteasy-bg {
+  background: url(../images/audio_sprite.png) no-repeat 0 9999px;
+}
+
+.neteasy-logo {
+  display: inline-block;
+  width: 17px;
+  height: 18px;
+  background-position: 0 -132px;
+  vertical-align: middle;
+  cursor: pointer;
+}
