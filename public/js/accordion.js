@@ -26,6 +26,8 @@ $(function() {
 		}else{
 			$this.parent().parent().parent().find("li").removeClass('active');
 			$this.addClass('active');
+			console.log($this.data().href);
+			$("#content").load($this.data().href);
 			/*if (!e.data.multiple) {
 				console.log(e.data.multiple);
 			};*/

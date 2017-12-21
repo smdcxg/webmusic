@@ -16,5 +16,7 @@ Route::get('/', function () {
 });
 Route::post("search", function (){
 	$input = request()->all();
-    return json_encode(Php_Ppython::ppython("netease::search_suggest", $input["q"]));
+    return Php_Ppython::ppython("netease::search_suggest", $input["q"]);
 });
+
+Route::get("discover/playlist", "Netease\DiscoverController@playlist");

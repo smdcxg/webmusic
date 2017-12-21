@@ -145,9 +145,9 @@
             <!-- Contenedor -->
             <ul id="accordion" class="accordion">
                 <li class="open">
-                    <div class="link"><i class="neteasy-logo neteasy-bg"></i>网易云音乐<i class="fa fa-chevron-down"></i></div>
+                    <div class="link"><i class="netease-logo netease-bg"></i>网易云音乐<i class="fa fa-chevron-down"></i></div>
                     <ul class="submenu" style="display: block;">
-                        <li><a href="#"><i class="fa fa-paint-brush"></i>&nbsp;&nbsp;发现音乐</a></li>
+                        <li data-href="http://127.0.0.1/webmusic/server.php/discover/playlist"><a href="#"><i class="fa fa-music" style="color: #595959;"></i>&nbsp;&nbsp;发现音乐</a></li>
                         <li><a href="#">HTML</a></li>
                         <li><a href="#">CSS</a></li>
                         <li><a href="#">Maquetacion web</a></li>
@@ -196,7 +196,7 @@
             </script>  
             <object height="100" width="100" data="./public/mp3/test.mp3"></object-->
         </div>
-        <div class="content">content</div>
+        <div id="content" class="content">content</div>
     </div>
     
     <div class="foot" style="height:68px;background-color: #f3f3f3">

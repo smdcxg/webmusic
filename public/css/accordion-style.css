@@ -97,29 +97,29 @@
  .submenu li i {
 	position: unset;
 	font-size: 18px;
-	color: #595959;
+	
 }
 
  .submenu .active a {
 	background: #e9e9e9;
 	text-decoration:none;
-	color: #444359;
+	color: #000;
  }
 
  .submenu li a {
  	display: block;
  	text-decoration: none;
- 	color: #444359;
+ 	color: #6d6c8d;
  	padding: 12px;
- 	padding-left: 42px;
+	padding-left: 42px;
  	/*-webkit-transition: all 0.25s ease;
  	-o-transition: all 0.25s ease;
  	transition: all 0.25s ease;*/
  }
 
  .submenu a:hover {
-	background: #e9e9e9;
+	/*background: #e9e9e9;
 	text-decoration: none;
- 	color: #444359;
+ 	color: #444359;*/
  }
 
