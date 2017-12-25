@@ -21,17 +21,19 @@
                 max-width:180px;
             }
             .playhover{
-                z-index: 10;
+                
             }
-            .playhover:hover .play{
+            .playhover:hover a.play{
                 display: block;
             }
             .discover .play {
                 position: relative;
-                top: -80px;
+                top: -5px;
+                margin-top:-32px;
                 left: calc(100% - 37px);
                 border-radius:16px;
                 display: none;
+                z-index: 100;
             }
             .discover .play:hover {
                 background-color: rgba(0, 0, 0, 0.5);
@@ -55,12 +57,11 @@
             <ul>
             @foreach ($data as $k=>$one)
                 <li>
-                    <a href="javascript:;" class="playhover">
-                        <img src="{{$one[0]}}" />
+                    <div class="playhover">
+                        <a href="javascript:;"><img src="{{$one[0]}}" /></a>
                         <a href="javascript:;" class="netease-play netease-bg play"></a>
-                    </a>
+                    </div>
                     <a href="javascript:;" class="introduce">{{$one[1]}}</a>
-                    
                 </li>
             @endforeach
             </ul>

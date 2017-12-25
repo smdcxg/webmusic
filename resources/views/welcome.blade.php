@@ -56,6 +56,11 @@
                     // make core object accessible globally
                     console.log(channel);
                     window.core = channel.objects.core;
+                    
+                    $("#window_title").mousedown(function (e){
+                        console.log(e);
+                        core.receiveCmd("dragStart");
+                    });
 
                     core.sendText.connect(function(message) {
                         //output("Received message: " + message);
@@ -105,15 +110,15 @@
             <li><a href="#">Separated link</a></li-->
         </ul>
     </div>
-    <!--div id="window_title" class="top">
+    <div id="window_title" class="top">
         <div class="fleft w200">
         <a href="#" style="margin-left: 20px">
             <img width="50px" height="50px" src="./public/images/logo.png" style="-webkit-filter: grayscale();" />
         </a>
         </div>
-        <div class="top-content fleft"-->
+        <div class="top-content fleft">
         <!-- 搜索框 -->
-            <!--form style="width:300px;margin-left:30px;padding-top:10px">
+            <form style="width:300px;margin-left:30px;padding-top:10px">
                 <div class="typeahead__container">
                     <div class="typeahead__field">
                         <span class="typeahead__query">
@@ -129,17 +134,17 @@
                         </span>
                     </div>
                 </div>
-            </form-->
+            </form>
         <!-- 搜索框 End -->
-        <!--/div>
+        </div>
         <div class="fleft w200">
             <a id="close" href="javascript:;" class="control control-close close rounded black"></a>
             <a id="maximized_normal" href="javascript:;" class="control control-max maxinum rounded black"></a>
-            <a id="minimized" href="javascript:;" class="control control-min mininum rounded black"></a-->
+            <a id="minimized" href="javascript:;" class="control control-min mininum rounded black"></a>
             <!--a id="normal" href="javascript:;" class="control control-max normal rounded black"></a-->
-        <!--/div>
-    </div-->
-    <div class="cont" style="top:0px;bottom:68px">
+        </div>
+    </div>
+    <div class="cont" style="top:50px;bottom:68px">
         <div class="left-menu">
             
             <!-- Contenedor -->

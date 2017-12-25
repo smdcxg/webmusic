@@ -22,6 +22,7 @@ html, body {
     display: block;
     float: right;
     color: #ddd;
+    margin-right: 10px;
     text-decoration:none;
 }
 .control:hover{
@@ -59,7 +60,7 @@ html, body {
 .cont {
     width: 100%;
     position:absolute;
-    top: 0px;
+    top: 50px;
     bottom: 68px;
 }
 .left-menu {
