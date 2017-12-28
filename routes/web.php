@@ -20,3 +20,4 @@ Route::post("search", function (){
 });
 
 Route::get("discover/playlist", "Netease\DiscoverController@playlist");
+Route::get("playlist", "Netease\PlaylistController@index");

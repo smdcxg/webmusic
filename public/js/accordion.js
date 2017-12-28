@@ -24,15 +24,27 @@ $(function() {
 				$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
 			};
 		}else{
-			$this.parent().parent().parent().find("li").removeClass('active');
-			$this.addClass('active');
-			console.log($this.data().href);
-			$("#content").load($this.data().href);
-			/*if (!e.data.multiple) {
-				console.log(e.data.multiple);
-			};*/
+			if(!$this.hasClass('active')){
+        $this.parent().parent().parent().find("li").removeClass('active');
+        $this.addClass('active');
+        $('#content').load($this.data().href);
+        history.pushState({url:$this.data().href}, "", $this.data().href);
+      }
 		}
 	}	
 
 	var accordion = new Accordion($('#accordion'), false);
+  /*$(".load-href").click(function (e){
+    $("#content").load($(e.currentTarget).data("href"));
+  });*/
+  $(window).on("popstate", function(event) {
+
+    // 取得之前通过pushState保存的state object
+    // jQuery对event做了一层包装，需要通过originalEvent取得原生event。
+    var state = event.originalEvent.state;
+
+        console.log(state);
+
+    //updateByPage(pageNow);
+  });
 });

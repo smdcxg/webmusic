@@ -56,7 +56,7 @@
         <div class="discover">
             <ul>
             @foreach ($data as $k=>$one)
-                <li>
+                <li class="load-href" data-href="http://127.0.0.1/webmusic/server.php/playlist?id={{$one[3]}}">
                     <div class="playhover">
                         <a href="javascript:;"><img src="{{$one[0]}}" /></a>
                         <a href="javascript:;" class="netease-play netease-bg play"></a>
@@ -67,4 +67,9 @@
             </ul>
         </div>
     </body>
+    <script>
+    $(".load-href").click(function (e){
+        $("#content").load($(e.currentTarget).data("href"));
+    });
+    </script>
 </html>
