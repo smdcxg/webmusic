@@ -11,8 +11,6 @@ $(function() {
     // jQuery对event做了一层包装，需要通过originalEvent取得原生event。
     var state = event.originalEvent.state;
 
-    console.log(state);
-
     urlLoad(state.url);
   });
   $('#content a').click(function(e){
@@ -20,16 +18,19 @@ $(function() {
     urlLoad(href);
     return false;
   });
-  var defaultLoad = function (){
-    var url = window.location.href;
-    var href = '/discover/playlist';
+  window.decodeLoad = function (url){   // 解析链接
+    if(!url){
+		url = window.location.href;
+	}
+    var href = '/discover';
     var index = url.indexOf("#");
     if(index !== -1){
       href = url.substring(index + 1);
     }
-    urlLoad(href);
+	return href;
   }
-  defaultLoad();    // 首次加载链接 分配默认页面
+  var href = decodeLoad();
+  urlLoad(href);
   /*************END 加载url **************/
     
   /****** 播放音乐******/
@@ -41,10 +42,8 @@ $(function() {
         url: 'http://music.163.com/song/media/outer/url?id=473571249.mp3',
     },
   });
-  ap.volume('0.5');
-  $("body").on('click', '[data-res-action="play"]', function (e){
-    var data = $(e.currentTarget).data();
-    var newMusic = [{
+  window.setAddMusic = function (data){
+	var newMusic = [{
       title: data.resAlname,
       author: data.resArname,
       url: 'http://music.163.com/song/media/outer/url?id='+data.resId+'.mp3',
@@ -53,6 +52,12 @@ $(function() {
     console.log(ap.playIndex);
     ap.setMusic(ap.playIndex + 1);
     ap.play();
+  }
+  
+  ap.volume('0.5');  //设置音量
+  $("body").on('click', '[data-res-action="play"]', function (e){
+    var data = $(e.currentTarget).data();
+	setAddMusic(data);
   });
   /******END 播放音乐******/
   

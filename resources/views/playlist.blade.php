@@ -12,7 +12,6 @@
     </tr>
   </thead>
   <tbody id="table_con">
-    暂无数据
   </tbody>
 </table>
 </body>

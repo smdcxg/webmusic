@@ -25,12 +25,12 @@ $(function() {
 			};
 		}else{
 			if(!$this.hasClass('active')){
-        $this.parent().parent().parent().find("li").removeClass('active');
-        $this.addClass('active');
-        if($this.data().href){
-          urlLoad($this.data().href);
-        }
-      }
+				$this.parent().parent().parent().find("li").removeClass('active');
+				$this.addClass('active');
+				if($this.data().href){
+				  urlLoad($this.data().href);
+				}
+			}
 		}
 	}	
 

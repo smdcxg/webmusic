@@ -155,10 +155,10 @@
                 <li class="open">
                     <div class="link"><i class="netease-logo netease-bg"></i>网易云音乐<i class="fa fa-chevron-down"></i></div>
                     <ul class="submenu" style="display: block;">
-                        <li data-href="/discover/playlist"><a href="javascript:;"><i class="fa fa-music" style="color: #595959;"></i>&nbsp;&nbsp;发现音乐</a></li>
-                        <li data-href="{{url('')}}"><a href="javascript:;">HTML</a></li>
-                        <li><a href="javascript:;">CSS</a></li>
-                        <li><a href="javascript:;">Maquetacion web</a></li>
+                        <li data-href="/discover"><span class="cus"></span><i class="fa fa-music" style="color: #595959;"></i><a href="javascript:;">发现音乐</a></li>
+                        <li><span class="cus"></span><i class="fa fa-music" style="color: #595959;"></i><a href="javascript:;">HTML</a></li>
+                        <li><a href="javascript:;"><span class="cus"></span><i class="fa fa-music" style="color: #595959;"></i>CSS</a></li>
+                        <li><a href="javascript:;"><span class="cus"></span><i class="fa fa-music" style="color: #595959;"></i>Maquetacion web</a></li>
                     </ul>
                 </li>
                 <li>

@@ -18,6 +18,8 @@ Route::post('search', function (){
 	$input = request()->all();
     return Php_Ppython::ppython('netease::search_suggest', $input['q']);
 });
+Route::get('/playlist', 'PlaylistController@index');
 
-Route::get('/discover/playlist', 'Netease\DiscoverController@playlist');
-Route::get('playlist', 'Netease\PlaylistController@index');
+Route::get('/discover', 'Discover\DefaultController@playlist');
+Route::get('/discover/playlist', 'Discover\PlaylistController@index');
+Route::get('/discover/toplist', 'Discover\ToplistController@index');

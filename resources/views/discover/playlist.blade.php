@@ -50,39 +50,10 @@
                 color: #333;
                 font-size: 13px;
             }
-            #g_nav2 {
-                height: 45px;
-                text-align: center;
-                margin: 0px 20px 0px 20px;
-                border-bottom: 1px solid #e6e6e6;
-            }
-            .discover-nav {
-                margin: 0px auto;
-                width: 200px;
-            }
-            .discover-nav li{
-                float: left;
-                width: 60px;
-                line-height: 45px;
-            }
-            .discover-nav li a{
-                text-decoration: none;
-                color: #333;
-            }
-            .discover-nav li.action{
-                border-bottom: 2px solid #333;
-                line-height: 43px;
-            }
         </style>
     </head>
     <body>
-    <div id="g_nav2">
-        <ul class="discover-nav">
-            <li><a href="#">推荐</a></li>
-            <li><a href="#">排行榜</a></li>
-            <li class="action"><a href="/discover/playlist">歌单</a></li>
-        </ul>
-    </div>
+	@include('discover.nav')
     <div class="discover">
         <ul>
         @foreach ($data as $k=>$one)
@@ -97,11 +68,4 @@
         </ul>
     </div>
     </body>
-    <script>
-    $('#content a').click(function(e){
-        var href = $(e.currentTarget).attr("href");
-        urlLoad(href);
-        return false;
-    });
-    </script>
 </html>
