@@ -136,8 +136,8 @@
  	transition: all 0.25s ease;*/
  }
 
-  .submenu li:hover i, .submenu li:hover a {
-	/*background: #e9e9e9;*/
+  .submenu li:hover, .submenu li:hover a {
+	background: #e9e9e9;
 	text-decoration: none;
  	color: #000;
  }

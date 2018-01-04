@@ -56,16 +56,35 @@
 	@include('discover.nav')
     <div class="discover">
         <ul>
-        @foreach ($data as $k=>$one)
+        @foreach ($data['playlists'] as $k=>$one)
             <li>
                 <div class="playhover">
-                    <a href="/playlist?id={{$one[3]}}"><img src="{{$one[0]}}" /></a>
+                    <a href="/playlist?id={{$one['id']}}"><img src="{{$one['coverImgUrl']}}" /></a>
                     <a href="javascript:;" class="netease-play netease-bg play"></a>
                 </div>
-                <a href="/playlist?id={{$one[3]}}" class="introduce">{{$one[1]}}</a>
+                <a href="/playlist?id={{$one['id']}}" class="introduce">{{$one['description']}}</a>
             </li>
         @endforeach
         </ul>
     </div>
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <li>
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+          <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
     </body>
 </html>

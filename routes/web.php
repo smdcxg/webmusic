@@ -23,3 +23,4 @@ Route::get('/playlist', 'PlaylistController@index');
 Route::get('/discover', 'Discover\DefaultController@playlist');
 Route::get('/discover/playlist', 'Discover\PlaylistController@index');
 Route::get('/discover/toplist', 'Discover\ToplistController@index');
+Route::get('/private_fm', 'PrivateFMController@index');

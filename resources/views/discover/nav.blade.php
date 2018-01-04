@@ -35,10 +35,12 @@
         var href = decodeLoad();
         $("#g_nav2 li").removeClass("action");
         $('#g_nav2 li [href="'+href+'"]').parent().addClass('action');
-    }
+    };
     urlToNav();
 	$('#content a').click(function(e){
         var href = $(e.currentTarget).attr("href");
+        setUrl(href);
+        urlToNav();
         urlLoad(href);
         return false;
     });

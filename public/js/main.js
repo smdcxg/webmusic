@@ -1,4 +1,7 @@
 $(function() {
+  window.setUrl = function (href){
+    history.pushState({url:href}, "", '#' + href);
+  }
   /************* 加载url **************/
   window.urlLoad = function (href){
     var url = href;
@@ -20,17 +23,21 @@ $(function() {
   });
   window.decodeLoad = function (url){   // 解析链接
     if(!url){
-		url = window.location.href;
-	}
+      url = window.location.href;
+    }
     var href = '/discover';
     var index = url.indexOf("#");
     if(index !== -1){
       href = url.substring(index + 1);
     }
 	return href;
-  }
+  };
   var href = decodeLoad();
-  urlLoad(href);
+  var navs = href.substring('1').split('/', 1);
+  console.log(navs);
+  setTimeout('$(\'#accordion .submenu [data-href="/'+navs[0]+'"]\').eq(0).click()', 0);
+  setUrl(href);
+  //urlLoad(href);
   /*************END 加载url **************/
     
   /****** 播放音乐******/
@@ -39,7 +46,8 @@ $(function() {
     music: {
         title: 'Preparation',
         author: 'Hans Zimmer/Richard Harvey',
-        url: 'http://music.163.com/song/media/outer/url?id=473571249.mp3',
+        url: '',
+        //url: 'http://music.163.com/song/media/outer/url?id=473571249.mp3',
     },
   });
   window.setAddMusic = function (data){
