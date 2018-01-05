@@ -63,11 +63,36 @@ html, body {
     top: 50px;
     bottom: 68px;
 }
+.left {
+  width: 200px;
+  height: 100%;
+  background-color: rgba(244, 245, 245, 0.59);
+  float: left;
+}
 .left-menu {
-    width: 200px;
-    height: 100%;
-    background-color: rgba(244, 245, 245, 0.59);
-    float: left;
+  width: 200px;
+  height: calc(100% - 70px);
+  float: left;
+}
+.left-login-win {
+  width: 200px;
+  height: 70px;
+  float: left;
+  border-top: 1px solid rgba(210, 210, 210, 1);
+  padding: 5px;
+  cursor:pointer;
+}
+.lwm-head {
+  width: 45px;
+  height: 60px;
+  float: left;
+}
+.lwm-name {
+  width: 145px;
+  height: 60px;
+  float: left;
+  padding-left: 20px;
+  line-height: 60px;
 }
 .content {
     width: calc(100% - 200px);

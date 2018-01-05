@@ -148,61 +148,68 @@
         </div>
     </div>
     <div class="cont" style="top:50px;bottom:68px">
-        <div class="left-menu">
+        <div class="left">
+            <div class="left-menu">
+                
+                <!-- Contenedor -->
+                <ul id="accordion" class="accordion">
+                    <li class="open">
+                        <div class="link"><i class="netease-logo netease-bg"></i>网易云音乐<i class="fa fa-chevron-down"></i></div>
+                        <ul class="submenu" style="display: block;">
+                            <li data-href="/discover"><span class="cus"></span><i class="fa fa-music" style="color: #595959;"></i><a href="javascript:;">发现音乐</a></li>
+                            <li><span class="cus"></span><i class="fa fa-headphones" style="color: #595959;"></i><a href="javascript:;">私人FM</a></li>
+                            <li><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>CSS</a></li>
+                            <li><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>Maquetacion web</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="link"><i class="fa fa-code"></i>酷狗音乐<i class="fa fa-chevron-down"></i></div>
+                        <ul class="submenu">
+                            <li><a href="javascript:;">Javascript</a></li>
+                            <li><a href="javascript:;">jQuery</a></li>
+                            <li><a href="javascript:;">Frameworks javascript</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="link"><i class="fa fa-mobile"></i>酷我音乐盒<i class="fa fa-chevron-down"></i></div>
+                        <ul class="submenu">
+                            <li><a href="javascript:;">Tablets</a></li>
+                            <li><a href="javascript:;">Dispositivos mobiles</a></li>
+                            <li><a href="javascript:;">Medios de escritorio</a></li>
+                            <li><a href="javascript:;">Otros dispositivos</a></li>
+                        </ul>
+                    </li>
+                    <li><div class="link"><i class="fa fa-globe"></i>Posicionamiento web<i class="fa fa-chevron-down"></i></div>
+                        <ul class="submenu">
+                            <li><a href="javascript:;">Google</a></li>
+                            <li><a href="javascript:;">Bing</a></li>
+                            <li><a href="javascript:;">Yahoo</a></li>
+                            <li><a href="javascript:;">Otros buscadores</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--script type="text/javascript" src="./public/js/audio-player.js"></script>
+                <script type="text/javascript">  
+                AudioPlayer.setup("http://127.0.0.1/webmusic/public/player.swf", {  
+                    width: 290  
+                });  
+                </script>  
+                <p id="audioplayer_1">Alternative content</p>  
+                <script type="text/javascript">  
+                AudioPlayer.embed("audioplayer_1", {soundFile: "./public/mp3/test.mp3"});  
+                </script>  
+        
+                <p id="audioplayer_2">Alternative content</p>  
+                <script type="text/javascript">  
+                AudioPlayer.embed("audioplayer_2", {soundFile: "./public/mp3/test.mp3"});  
+                </script>  
+                <object height="100" width="100" data="./public/mp3/test.mp3"></object-->
             
-            <!-- Contenedor -->
-            <ul id="accordion" class="accordion">
-                <li class="open">
-                    <div class="link"><i class="netease-logo netease-bg"></i>网易云音乐<i class="fa fa-chevron-down"></i></div>
-                    <ul class="submenu" style="display: block;">
-                        <li data-href="/discover"><span class="cus"></span><i class="fa fa-music" style="color: #595959;"></i><a href="javascript:;">发现音乐</a></li>
-                        <li><span class="cus"></span><i class="fa fa-headphones" style="color: #595959;"></i><a href="javascript:;">私人FM</a></li>
-                        <li><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>CSS</a></li>
-                        <li><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>Maquetacion web</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="link"><i class="fa fa-code"></i>酷狗音乐<i class="fa fa-chevron-down"></i></div>
-                    <ul class="submenu">
-                        <li><a href="javascript:;">Javascript</a></li>
-                        <li><a href="javascript:;">jQuery</a></li>
-                        <li><a href="javascript:;">Frameworks javascript</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="link"><i class="fa fa-mobile"></i>酷我音乐盒<i class="fa fa-chevron-down"></i></div>
-                    <ul class="submenu">
-                        <li><a href="javascript:;">Tablets</a></li>
-                        <li><a href="javascript:;">Dispositivos mobiles</a></li>
-                        <li><a href="javascript:;">Medios de escritorio</a></li>
-                        <li><a href="javascript:;">Otros dispositivos</a></li>
-                    </ul>
-                </li>
-                <li><div class="link"><i class="fa fa-globe"></i>Posicionamiento web<i class="fa fa-chevron-down"></i></div>
-                    <ul class="submenu">
-                        <li><a href="javascript:;">Google</a></li>
-                        <li><a href="javascript:;">Bing</a></li>
-                        <li><a href="javascript:;">Yahoo</a></li>
-                        <li><a href="javascript:;">Otros buscadores</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <!--script type="text/javascript" src="./public/js/audio-player.js"></script>
-            <script type="text/javascript">  
-            AudioPlayer.setup("http://127.0.0.1/webmusic/public/player.swf", {  
-                width: 290  
-            });  
-            </script>  
-            <p id="audioplayer_1">Alternative content</p>  
-            <script type="text/javascript">  
-            AudioPlayer.embed("audioplayer_1", {soundFile: "./public/mp3/test.mp3"});  
-            </script>  
-    
-            <p id="audioplayer_2">Alternative content</p>  
-            <script type="text/javascript">  
-            AudioPlayer.embed("audioplayer_2", {soundFile: "./public/mp3/test.mp3"});  
-            </script>  
-            <object height="100" width="100" data="./public/mp3/test.mp3"></object-->
+            </div>
+            <div class="left-login-win">
+                <div class="lwm-head"><img width="50px" height="100%" src="sdf" /></div>
+                <div class="lwm-name">asdasd</div>
+            </div>
         </div>
         <div id="content" class="content">content</div>
     </div>

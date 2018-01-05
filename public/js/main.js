@@ -43,12 +43,17 @@ $(function() {
   /****** 播放音乐******/
   var ap = new APlayer({    
     element: document.getElementById('aplayer1'),
-    music: {
+    narrow: false,
+    mutex: true,
+    listmaxheight: '400px',
+    theme: '#333',
+    music: [{
         title: 'Preparation',
         author: 'Hans Zimmer/Richard Harvey',
         url: '',
         //url: 'http://music.163.com/song/media/outer/url?id=473571249.mp3',
-    },
+      }
+    ],
   });
   window.setAddMusic = function (data){
 	var newMusic = [{
