@@ -102,21 +102,21 @@ html, body {
     border-left: solid 1px rgba(202, 210, 210, 1);
     overflow-y:scroll;
 }
-.content::-webkit-scrollbar {/*滚动条整体样式*/
+*::-webkit-scrollbar {/*滚动条整体样式*/
   width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
   height: 1px;
 }
-.content::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+*::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
   border-radius: 10px;
    -webkit-box-shadow: inset 0 0 5px rgba(233, 233, 233, 0.2);
   background: #e4e4e4;
 }
-.content::-webkit-scrollbar-track {/*滚动条里面轨道*/
+*::-webkit-scrollbar-track {/*滚动条里面轨道*/
   /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
   border-radius: 10px;
   background: #EDEDED;*/
 }
-.content::-webkit-scrollbar-thumb:hover { /*滚动条划过效果*/
+*::-webkit-scrollbar-thumb:hover { /*滚动条划过效果*/
   background-color:#d4d4d4
 }
 a {

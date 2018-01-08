@@ -44,8 +44,10 @@
                 float: left;*/
                 margin-top: 5px;
                 display: block;
-                height: 38px;
+                
                 overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
                 text-decoration: none;
                 color: #333;
                 font-size: 13px;
@@ -59,10 +61,10 @@
         @foreach ($data['playlists'] as $k=>$one)
             <li>
                 <div class="playhover">
-                    <a href="/playlist?id={{$one['id']}}"><img src="{{$one['coverImgUrl']}}" /></a>
+                    <a href="/playlist?id={{$one['id']}}"><img src="{{$one['coverImgUrl']}}?param=140y140" /></a>
                     <a href="javascript:;" class="netease-play netease-bg play"></a>
                 </div>
-                <a href="/playlist?id={{$one['id']}}" class="introduce">{{$one['description']}}</a>
+                <a href="/playlist?id={{$one['id']}}" title="{{$one['description']}}" class="introduce">{{$one['description']}}</a>
             </li>
         @endforeach
         </ul>
