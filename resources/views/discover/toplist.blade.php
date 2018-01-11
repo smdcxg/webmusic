@@ -45,7 +45,7 @@
 			<div class="toplist-title">飙升榜</div>
 			<ul class="toplist-list">
 				@foreach ($data['playlist']['tracks'] as $k=>$one)
-				<li data-res-id="{{$one['id']}}" data-res-alname="{{$one['al']['name']}}" data-res-arname="{{implode('/', array_column($one['ar'], 'name'))}}">
+				<li data-res-id="{{$one['id']}}" data-res-alname="{{$one['al']['name']}}" data-res-name="{{$one['name']}}" data-res-pic="{{$one['al']['picUrl']}}" data-res-arname="{{implode('/', array_column($one['ar'], 'name'))}}">
 					<div class="album">{{$k + 1}}&nbsp;{{$one['name']}}</div>
 					<div class="artists"><a href="javascript:;">{{implode('/', array_column($one['ar'], 'name'))}}</a></div>
 				</li>

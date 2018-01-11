@@ -34,7 +34,6 @@ $(function() {
   };
   var href = decodeLoad();
   var navs = href.substring('1').split('/', 1);
-  console.log(navs);
   setTimeout('$(\'#accordion .submenu [data-href="/'+navs[0]+'"]\').eq(0).click()', 0);
   setUrl(href);
   //urlLoad(href);
@@ -50,21 +49,38 @@ $(function() {
     music: [{
         title: 'Preparation',
         author: 'Hans Zimmer/Richard Harvey',
+        id: '',
+        pic: '',
         url: '',
         //url: 'http://music.163.com/song/media/outer/url?id=473571249.mp3',
       }
     ],
   });
+  
   window.setAddMusic = function (data){
 	var newMusic = [{
-      title: data.resAlname,
+      title: data.resName,
       author: data.resArname,
+      id: data.resId,
+      pic: data.resPic+'?param=66y66',
       url: 'http://music.163.com/song/media/outer/url?id='+data.resId+'.mp3',
     }];
-    ap.addMusic(newMusic);
-    console.log(ap.playIndex);
-    ap.setMusic(ap.playIndex + 1);
+     var repeat_index = 0;
+     var index = ap.option.music.length;
+    $.each(ap.option.music, function (index){
+      if(this.id == data.resId){
+        repeat_index = index;
+        return false;
+      }
+    });
+    if(repeat_index){
+      index = repeat_index;
+    }else{
+      ap.addMusic(newMusic);
+    }
+    ap.setMusic(index);
     ap.play();
+    window.ap = ap;
   }
   
   ap.volume('0.5');  //设置音量

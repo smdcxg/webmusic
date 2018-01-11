@@ -105,16 +105,15 @@ return [
     */
 
     'redis' => [
-
-        'client' => 'predis',
-
+        'cluster' => false,
         'default' => [
-            'host' => env('REDIS_HOST', '127.0.0.1'),
-            'password' => env('REDIS_PASSWORD', null),
-            'port' => env('REDIS_PORT', 6379),
+            'host' => '47.104.14.238',
+            'password' => 'UhUhOO',
+            'port' => 6379,
             'database' => 0,
         ],
 
+        
     ],
 
 ];

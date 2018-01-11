@@ -157,7 +157,7 @@
                         <div class="link"><i class="netease-logo netease-bg"></i>网易云音乐<i class="fa fa-chevron-down"></i></div>
                         <ul class="submenu" style="display: block;">
                             <li data-href="/discover"><span class="cus"></span><i class="fa fa-music" style="color: #595959;"></i><a href="javascript:;">发现音乐</a></li>
-                            <li><span class="cus"></span><i class="fa fa-headphones" style="color: #595959;"></i><a href="javascript:;">私人FM</a></li>
+                            <li data-href="/private_fm"><span class="cus"></span><i class="fa fa-headphones" style="color: #595959;"></i><a href="javascript:;">私人FM</a></li>
                             <li><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>CSS</a></li>
                             <li><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>Maquetacion web</a></li>
                         </ul>
