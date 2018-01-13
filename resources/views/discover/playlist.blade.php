@@ -8,7 +8,7 @@
                 min-width: 730px;
                 padding: 20px;
             }
-            .discover li{
+            .discover .playlist li{
                 float: left;
                 width: calc(20% - 20px);
                 max-width:180px;
@@ -57,7 +57,7 @@
     <body>
 	@include('discover.nav')
     <div class="discover">
-        <ul>
+        <ul class="playlist">
         @foreach ($data['playlists'] as $k=>$one)
             <li>
                 <div class="playhover">
@@ -68,8 +68,7 @@
             </li>
         @endforeach
         </ul>
-    </div>
-    <div style="width:100%;text-align: center;">
+        <div style="width:100%;text-align: center;">
           <ul class="pagination">
             <li>
               <a href="#" aria-label="Previous">
@@ -87,6 +86,7 @@
               </a>
             </li>
           </ul>
-    </div>
+        </div>
+     </div>
     </body>
 </html>

@@ -14,8 +14,9 @@
 }
 .pf-r {
     float: left;
-    width: calc(100% - 350px);
-    height: 100%; 
+    width: calc(100% - 350px - 10px);
+    height: calc(100% -10px);
+    padding: 5px;
 }
 .pf-title span{
     margin-left: 10px;
@@ -87,7 +88,7 @@ fm.index = 0;
 fm.next = function (){
     if(fm.list[fm.index]){
         $('#pf_cover img').attr('src', fm.list[fm.index].album.blurPicUrl+'?param=350y350');
-        $('#pf_music_name').html('<歌曲：'+fm.list[fm.index].name);
+        $('#pf_music_name').html('歌曲：'+fm.list[fm.index].name);
         $('#pf_music_artists').html('歌手：'+fm.list[fm.index].artists[0].name);
         $('#pf_music_album').html('专辑：'+fm.list[fm.index].album.name);
         setAddMusic({resName:fm.list[fm.index].name, resArname:fm.list[fm.index].artists[0].name, resId:fm.list[fm.index].id, resPic: fm.list[fm.index].album.blurPicUrl});

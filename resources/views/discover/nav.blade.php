@@ -31,16 +31,14 @@
         </ul>
     </div>
 <script>
-	var urlToNav = function (){
-        var href = decodeLoad();
+	var urlToNav = function (href){
         $("#g_nav2 li").removeClass("action");
         $('#g_nav2 li [href="'+href+'"]').parent().addClass('action');
     };
-    urlToNav();
+    urlToNav(decodeLoad());
 	$('#content a').click(function(e){
         var href = $(e.currentTarget).attr("href");
-        setUrl(href);
-        urlToNav();
+        urlToNav(href);
         urlLoad(href);
         return false;
     });

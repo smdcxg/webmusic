@@ -4,17 +4,22 @@ $(function() {
   }
   /************* 加载url **************/
   window.urlLoad = function (href){
+    ld.open();
     var url = href;
-    $('#content').load(url);
+    $('#content').load(url, null, function (){
+      ld.close();
+    });
     history.pushState({url:url}, "", '#' + url);
   }
   $(window).on("popstate", function(event) {
 
     // 取得之前通过pushState保存的state object
     // jQuery对event做了一层包装，需要通过originalEvent取得原生event。
+    console.log(history.state);
     var state = event.originalEvent.state;
 
-    urlLoad(state.url);
+    $('#content').load(state.url);
+    history.pushState({url:state.url}, "");
   });
   $('#content a').click(function(e){
     var href = $(e.currentTarget).attr("href");
@@ -36,7 +41,6 @@ $(function() {
   var navs = href.substring('1').split('/', 1);
   setTimeout('$(\'#accordion .submenu [data-href="/'+navs[0]+'"]\').eq(0).click()', 0);
   setUrl(href);
-  //urlLoad(href);
   /*************END 加载url **************/
     
   /****** 播放音乐******/
@@ -120,4 +124,10 @@ $(function() {
     }
   }
   /*******END 生成搜索列表 *****/
+  
+  /*********** loading ************/
+  window.ld = new boxLoading({
+    id: '#loading',
+  });
+  /*********** END loading ************/
 });

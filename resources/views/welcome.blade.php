@@ -9,6 +9,10 @@
     
     <link rel="stylesheet" href="/public/css/accordion-style.css" media="screen" type="text/css" />
     <link href="/public/css/font-awesome.min.css" rel="stylesheet">
+    <!-- loading -->
+    <link rel="stylesheet" href="/public/css/boxLoading.css">
+    <script src="./public/js/boxLoading.js"></script>
+    
     <!-- Optional CSS -->
     <link rel="stylesheet" href="./public/css/jquery.typeahead.min.css">
  
@@ -212,6 +216,7 @@
             </div>
         </div>
         <div id="content" class="content">content</div>
+        <div id="loading" class="loading"><div class="boxLoading"></div></div>
     </div>
     
     <div class="foot" style="height:68px;background-color: #f3f3f3">
