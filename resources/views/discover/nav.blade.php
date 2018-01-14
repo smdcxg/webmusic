@@ -15,6 +15,9 @@
 	line-height: 45px;
 }
 .discover-nav li a{
+	display: block;
+	width: 100%;
+	height: 100%;
 	text-decoration: none;
 	color: #333;
 }
