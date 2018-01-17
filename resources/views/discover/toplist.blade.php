@@ -59,10 +59,9 @@
     @include('discover.nav')
 	<div class="toplist">
 		<div style="width:100%;padding-bottom:5px;border-bottom:1px solid #e6e6e6;font-size:18px">官方榜</div>
-		@foreach($datas as $key=>$one)
+		@foreach($datas as $key=>$data)
 		<div class="toplist-soarings">
 			<div class="toplist-box" id="soaring">
-				@foreach($one as $data)
 				<div class="tb-title">{{$topIndexs[$key]}}</div>
 				<ul class="tb-list">
 					@foreach ($data['playlist']['tracks'] as $k=>$one)
@@ -72,7 +71,6 @@
 					</li>
 					@endforeach
 				</ul>
-				@endforeach
 			</div>
 		</div>
 		@endforeach

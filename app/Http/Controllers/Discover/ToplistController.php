@@ -49,7 +49,7 @@ class ToplistController extends Controller
 				$ret[$index] = $redisData;
 			}else{
 				$ret[$index] = \Php_Ppython::ppython("netease::get_discover", 1, $index);
-				$cache->put($key, $ret, $minute);
+				$cache->put($key, $ret[$index], $minute);
 			}
 		}
 		
