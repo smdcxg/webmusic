@@ -16,7 +16,7 @@ class PlaylistController extends Controller
         if($cache->has($key)){
             $ret = $cache->get($key);
         }else{
-            $ret = \Php_Ppython::ppython("netease::get_discover", 0);
+            $ret = \Php_Ppython::ppython("netease::discover_playlist");
             $cache->put($key, $ret, $minute);
         }
         return view("discover.playlist", ["data"=>$ret]);

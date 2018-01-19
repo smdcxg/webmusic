@@ -210,9 +210,20 @@
                 <object height="100" width="100" data="./public/mp3/test.mp3"></object-->
             
             </div>
-            <div class="left-login-win">
+            <div class="left-login-win" id="login_info">
                 <div class="lwm-head"><img width="50px" height="100%" src="sdf" /></div>
-                <div class="lwm-name">asdasd</div>
+                <div class="lwm-name">点击登录</div>
+            </div>
+            <div class="login">
+                <form class="form-signin">       
+                  <h2 class="form-signin-heading">Please login</h2>
+                  <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+                  <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+                  <label class="checkbox">
+                    <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+                  </label>
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+                </form>
             </div>
         </div>
         <div id="content" class="content">content</div>
