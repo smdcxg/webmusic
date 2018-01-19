@@ -212,16 +212,14 @@
             </div>
             <div class="left-login-win" id="login_info">
                 <div class="lwm-head"><img width="50px" height="100%" src="sdf" /></div>
-                <div class="lwm-name">点击登录</div>
+                <div class="lwm-name" id="pop_login_win">点击登录</div>
             </div>
-            <div class="login">
-                <form class="form-signin">       
-                  <h2 class="form-signin-heading">Please login</h2>
-                  <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-                  <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
-                  <label class="checkbox">
-                    <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
-                  </label>
+            <div id="login" class="login">
+				<div class="login-title">网易云登录<span id="lt_close" class="lt-close"></span></div>
+                <form class="form-signin">    
+                  <p><input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" /></p>
+                  <p><input type="password" class="form-control" name="password" placeholder="Password" required=""/></p>
+                    <p><input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> 记住密码</p>
                   <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
                 </form>
             </div>
@@ -235,7 +233,14 @@
     </div>
 </body>
 <script>
-
+$('#lt_close').on('click', function (){
+	$('#login').hide();
+	$('#login_info').show();
+});
+$('#pop_login_win').on('click', function (){
+	$('#login_info').hide();
+	$('#login').show();
+});
 //http://www.runningcoder.org/jquerytypeahead/documentation/
 $.typeahead({
     input: ".js-typeahead",

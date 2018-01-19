@@ -6,6 +6,7 @@
   width: calc(100% - 200px);
   height: 100%;
   display: none;
+  /*z-index: 10086;*/
 }
 .boxLoading {  
   width: 50px;
