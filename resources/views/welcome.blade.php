@@ -212,15 +212,17 @@
             </div>
             <div class="left-login-win" id="login_info">
                 <div class="lwm-head"><img width="50px" height="100%" src="sdf" /></div>
-                <div class="lwm-name" id="pop_login_win">点击登录</div>
+                <div class="lwm-name" onclick="login_win_action(1)" id="pop_login_win">点击登录</div>
             </div>
-            <div id="login" class="login">
-				<div class="login-title">网易云登录<span id="lt_close" class="lt-close"></span></div>
-                <form class="form-signin">    
-                  <p><input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" /></p>
+			<script src="http://cdn.gbtags.com/jqueryui/1.10.4/jquery-ui.min.js"></script>
+            <div id="login" class="login" role="dialog">
+				<div class="login-title">网易云登录<span onclick="login_win_action(0)" id="lt_close" class="lt-close"  data-dismiss="modal"></span></div>
+                <form class="form-signin" onsubmit = "return ajaxSubmit(this)">    
+                  <p><input type="text" class="form-control" name="phone" placeholder="Email Address" required="" autofocus="" /></p>
                   <p><input type="password" class="form-control" name="password" placeholder="Password" required=""/></p>
-                    <p><input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> 记住密码</p>
-                  <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+                  <p><input type="checkbox" value="1" id="rememberLogin" name="rememberLogin"> 记住密码</p>
+				  <p>&nbsp;</p> 
+                  <p style="padding: 0px 40px 0px 40px"><button class="btn btn-warning btn-block" type="submit">登录</button></p>
                 </form>
             </div>
         </div>
@@ -233,14 +235,51 @@
     </div>
 </body>
 <script>
-$('#lt_close').on('click', function (){
-	$('#login').hide();
-	$('#login_info').show();
+$("#login").draggable({
+	handle: ".login-title" ,
+	containment: "body",
+	scroll: false 
 });
-$('#pop_login_win').on('click', function (){
-	$('#login_info').hide();
-	$('#login').show();
-});
+function login_win_action(action){
+	switch(action){
+	case 0:
+		$('#login').hide();
+		$('#login_info').show();
+		break;
+	case 1:
+		$('#login_info').hide();
+		$('#login').show();
+		break;
+	}
+}
+function form_list(e){
+	var d = {};
+    var t = $(e).serializeArray();
+    $.each(t, function() {
+      d[this.name] = this.value;
+    });
+	return d;
+}
+function ajaxSubmit(e){
+	var data = {};
+	data = form_list(e);
+	$.ajax({
+		url: '/login',
+		data: data,
+		type: 'POST',
+		dataType: 'JSON',
+		success: function (data){
+			if(data.code === 200){
+				login_win_action(0);
+				var profile = data.profile;
+				var html = '<div class="lwm-head"><img width="50px" height="60px" src="'+profile.avatarUrl+'?param=50y60" /></div>';
+				html += '<div class="lwm-name">'+profile.nickname+'</div>';
+				$('#login_info').html(html);
+			}
+		}
+	});
+	return false;
+}
 //http://www.runningcoder.org/jquerytypeahead/documentation/
 $.typeahead({
     input: ".js-typeahead",

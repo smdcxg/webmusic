@@ -19,8 +19,8 @@ html, body {
 	height: 300px;
 	font-size: 16px;
 	color: #fdfdfd;
-	left: calc(50% - 150px);
-	top: calc(50% - 150px);
+	left: calc(50% - 200px);
+	top: calc(50% - 200px);
 	background-color: #fdfdfd;
 	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 	display: none;
@@ -31,6 +31,7 @@ html, body {
 	background-color: #333;
 	padding-left: 15px;
 	line-height: 45px;
+	cursor:move;
 }
 .lt-close {
 	display: block;
@@ -66,7 +67,7 @@ html, body {
 }
 .login form {
 	font-size: 14px;
-	padding: 30px 50px 20px 50px;
+	padding: 40px 50px 20px 50px;
 	color: #333;
 }
 .login-close:hover {

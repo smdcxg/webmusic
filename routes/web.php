@@ -19,7 +19,7 @@ Route::post('search', function (){
     return Php_Ppython::ppython('netease::search_suggest', $input['q']);
 });
 Route::get('/playlist', 'PlaylistController@index');
-Route::get('/discover', 'LoginController@login');
+Route::post('/login', 'LoginController@login');
 Route::get('/discover', 'Discover\DefaultController@playlist');
 Route::get('/discover/playlist', 'Discover\PlaylistController@index');
 Route::get('/discover/toplist', 'Discover\ToplistController@index');
