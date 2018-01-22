@@ -99,8 +99,8 @@
  	/*border-bottom: 1px solid #4b4a5e;*/
  }
  .submenu li i {
-	margin-left: 35px;
-	margin-right: 5px;
+	margin-left: 36px;
+	margin-right: 10px;
 	position: unset;
 	font-size: 18px;
 	
@@ -111,7 +111,8 @@
 	text-decoration:none;
  }
  .submenu .active i {
-	margin-left: 32px;
+	/*margin-left: 36px;
+  margin-right: 10px;*/
  }
  .submenu .active a {
 	color: #000;
@@ -126,7 +127,7 @@
 	width: 3px;
 	margin-top: 5px;
 	height: 22px;
-	background-color: #333;
+	background-color: #ffa900;
  }
  .submenu li a {
  	text-decoration: none;

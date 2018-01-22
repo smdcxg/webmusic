@@ -145,10 +145,16 @@
         <!-- 搜索框 End -->
         </div>
         <div class="fleft w200">
-            <a id="close" href="javascript:;" class="control control-close close rounded black"></a>
+            <a id="close" href="javascript:;" class="control control-close win-close rounded black"></a>
             <a id="maximized_normal" href="javascript:;" class="control control-max maxinum rounded black"></a>
             <a id="minimized" href="javascript:;" class="control control-min mininum rounded black"></a>
             <!--a id="normal" href="javascript:;" class="control control-max normal rounded black"></a-->
+        </div>
+        <div class="maia-signature">
+            <span style="background-color:#ffa900"></span>
+            <span style="background-color:#00a753"></span>
+            <span style="background-color:#0089fa"></span>
+            <span style="background-color:#f35b24"></span>
         </div>
     </div>
     <div class="cont" style="top:50px;bottom:68px">
@@ -218,8 +224,8 @@
             <div id="login" class="login" role="dialog">
 				<div class="login-title">网易云登录<span onclick="login_win_action(0)" id="lt_close" class="lt-close"  data-dismiss="modal"></span></div>
                 <form class="form-signin" onsubmit = "return ajaxSubmit(this)">    
-                  <p><input type="text" class="form-control" name="phone" placeholder="Email Address" required="" autofocus="" /></p>
-                  <p><input type="password" class="form-control" name="password" placeholder="Password" required=""/></p>
+                  <p><input type="text" class="form-control" name="phone" placeholder="输入手机号" required="" autofocus="" /></p>
+                  <p><input type="password" class="form-control" name="password" placeholder="输入密码" required=""/></p>
                   <p><input type="checkbox" value="1" id="rememberLogin" name="rememberLogin"> 记住密码</p>
 				  <p>&nbsp;</p> 
                   <p style="padding: 0px 40px 0px 40px"><button class="btn btn-warning btn-block" type="submit">登录</button></p>
@@ -229,7 +235,7 @@
         <div id="content" class="content">content</div>
         <div id="loading" class="loading"><div class="boxLoading"></div></div>
     </div>
-    
+   <link rel="stylesheet" href="/public/css/play-wrapper.css">
     <div class="foot" style="height:68px;background-color: #f3f3f3">
         <div id="aplayer1" class="aplayer" style="margin:0px"></div>
     </div>
@@ -275,7 +281,9 @@ function ajaxSubmit(e){
 				var html = '<div class="lwm-head"><img width="50px" height="60px" src="'+profile.avatarUrl+'?param=50y60" /></div>';
 				html += '<div class="lwm-name">'+profile.nickname+'</div>';
 				$('#login_info').html(html);
-			}
+			}else{
+                
+            }
 		}
 	});
 	return false;
