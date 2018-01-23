@@ -106,8 +106,11 @@
 <body>
     <div id="window_title" class="top">
         <div class="fleft w200">
-        <a href="#" style="margin-left: 20px">
-            <img width="50px" height="50px" src="./public/images/logo.png" style="-webkit-filter: grayscale();" />
+        <a href="#" style="margin-left: 70px; display:block;height: 50px;line-height: 50px;font-family: 'Raleway', sans-serif;font-weight: 100">
+			<span style="font-size: 30px;color: #ffa900">'</span>
+			<span style="font-size: 22px;color;">O</span>
+			<span style="font-size: 22px;color">O</span>
+            <!--img width="50px" height="50px" src="./public/images/logo.png" style="-webkit-filter: grayscale();" /-->
         </a>
         </div>
         <div class="top-content fleft">

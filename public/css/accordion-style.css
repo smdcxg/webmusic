@@ -29,13 +29,13 @@
  }
 
 .accordion .link {
-  
+	font-weight: 500;
 	cursor: pointer;
 	display: block;
 	padding: 15px 15px 15px 42px;
 	color: #4D4D4D;
 	font-size: 14px;
-	font-weight: 700;
+	
 	/*border-bottom: 1px solid #ddd;*/
 	position: relative;
 	-webkit-transition: all 0.4s ease;
@@ -56,7 +56,7 @@
 	top: 16px;
 	left: 12px;
 	font-size: 18px;
-	color: #595959;
+	color: #797979;
 	-webkit-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
@@ -69,11 +69,11 @@
 }
 
 .accordion li.open .link {
-	color: #b63b4d;
+	color: #333;
 }
 
 .accordion li.open i {
-	color: #b63b4d;
+	color: #f35b24;
 }
 .accordion li.open i.fa-chevron-down {
 	-webkit-transform: rotate(180deg);
@@ -87,7 +87,7 @@
  -----------------------------*/
  .submenu {
  	display: none;
- 	background: rgba(244, 245, 245, 0.59);
+ 	background: rgba(244, 245, 245, 0.50);
 	font-size: 14px;
  }
 
@@ -103,7 +103,6 @@
 	margin-right: 10px;
 	position: unset;
 	font-size: 18px;
-	
 }
 
  .submenu .active {
@@ -115,18 +114,18 @@
   margin-right: 10px;*/
  }
  .submenu .active a {
+	font-weight: 500;
 	color: #000;
+	font-size: 14px;
  }
  .submenu .active .cus {
 	display: block;
  }
-
  .submenu li .cus {
 	display: none;
 	float: left;
 	width: 3px;
-	margin-top: 5px;
-	height: 22px;
+	height: 100%;
 	background-color: #ffa900;
  }
  .submenu li a {
