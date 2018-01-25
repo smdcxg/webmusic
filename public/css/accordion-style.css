@@ -103,6 +103,7 @@
 	margin-right: 10px;
 	position: unset;
 	font-size: 18px;
+  transition: none;
 }
 
  .submenu .active {
@@ -110,8 +111,7 @@
 	text-decoration:none;
  }
  .submenu .active i {
-	/*margin-left: 36px;
-  margin-right: 10px;*/
+	margin-left: 33px;
  }
  .submenu .active a {
 	font-weight: 500;

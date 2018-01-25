@@ -107,7 +107,7 @@ return [
     'redis' => [
         'cluster' => false,
         'default' => [
-            'host' => '47.104.14.238',
+            'host' => '123.56.216.160',
             'password' => 'UhUhOO',
             'port' => 6379,
             'database' => 0,

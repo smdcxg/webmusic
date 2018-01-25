@@ -40,16 +40,16 @@ class ToplistController extends Controller
 		/*************************************************/
 		$indexs = [0, 1, 2, 3, 4];
 		$ret = [];
+        $cache = Cache::store('redis');
 		foreach($indexs as $index){
 			$key = 'discoverToplist_'.$index;
 			$minute = 60;
-			$cache = Cache::store('redis');
 			$redisData = $cache->get($key);
 			if($redisData){
-				$ret[$index] = $redisData;
+				$ret[$index] = json_decode(gzuncompress($redisData), true);
 			}else{
 				$ret[$index] = \Php_Ppython::ppython("netease::discover_toplist",$index);
-				$cache->put($key, $ret[$index], $minute);
+				$cache->put($key, gzcompress(json_encode($ret[$index]), 6), $minute);
 			}
 		}
 		

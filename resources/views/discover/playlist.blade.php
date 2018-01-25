@@ -4,13 +4,13 @@
             .discover {
                 margin: 0px auto;
                 width: 100%;
-                max-width: 1000px;
-                min-width: 730px;
+                max-width: 1100px;
+                min-width: 830px;
                 padding: 20px;
             }
             .discover .playlist li{
                 float: left;
-                width: calc(20% - 20px);
+                width: calc(25% - 20px);
                 max-width:180px;
                 margin: 0px 10px 20px 10px;
                 list-style-type:none;

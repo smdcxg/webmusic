@@ -7,7 +7,7 @@
 //-----------------------------------------------------------
 
 //define("LAJP_IP", "127.0.0.1");     //Python端IP
-define("LAJP_IP", "47.104.14.238");     //Python端IP
+define("LAJP_IP", "123.56.216.160");     //Python端IP
 define("LAJP_PORT", 21230);         //Python端侦听端口
 
 define("PARAM_TYPE_ERROR", 101);    //参数类型错误

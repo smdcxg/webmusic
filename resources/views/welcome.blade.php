@@ -171,7 +171,7 @@
                         <ul class="submenu" style="display: block;">
                             <li data-href="/discover"><span class="cus"></span><i class="fa fa-music" style="color: #595959;"></i><a href="javascript:;">发现音乐</a></li>
                             <li data-href="/private_fm"><span class="cus"></span><i class="fa fa-headphones" style="color: #595959;"></i><a href="javascript:;">私人FM</a></li>
-                            <li><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>CSS</a></li>
+                            <li data-href="/user_playlist"><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>创建的歌单</a></li>
                             <li><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>Maquetacion web</a></li>
                         </ul>
                     </li>

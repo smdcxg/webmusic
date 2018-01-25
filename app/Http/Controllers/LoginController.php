@@ -21,7 +21,10 @@ class LoginController extends Controller
             $login_info = $redisData;
         }else{
             $login_info = \Php_Ppython::ppython('netease::login', $ajax_data['phone'], $ajax_data['password'], isset($ajax_data['rememberLogin'])?True:False);
-            $cache->put($key, $login_info, $minute);
+            if($login_info['code'] === 200){
+                $request->session()->put('uid', $login_info['account']['id']);
+                $cache->put($key, $login_info, $minute);
+            }
         }
         return $login_info;
     }

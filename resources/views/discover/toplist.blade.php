@@ -4,22 +4,20 @@
 		.toplist {
 			margin: 0px auto;
 			width: 100%;
-			max-width: 1310px;
-            min-width: 1010px;
-			padding: 30px;
+			max-width: 940px;
+            min-width: 830px;
+			padding: 10px;
 		}
 		.toplist-soarings {
 			
 		}
 		.toplist-box {
 			float: left;
-			width: 100%;
-			min-width: 200px;
-			max-width: 300px;
+			width: calc(33% - 15px);
 			height: 350px;
 			overflow: hidden;
 			border: 1px solid #e3e3e3;
-			margin-left: 10px;
+			margin-left: 15px;
 			margin-top: 10px;
 		}
 		.tb-title {

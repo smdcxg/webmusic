@@ -20,6 +20,7 @@ Route::post('search', function (){
 });
 Route::get('/playlist', 'PlaylistController@index');
 Route::post('/login', 'LoginController@login');
+Route::get('/user_playlist', 'UserPlaylistController@index');
 Route::get('/discover', 'Discover\DefaultController@playlist');
 Route::get('/discover/playlist', 'Discover\PlaylistController@index');
 Route::get('/discover/toplist', 'Discover\ToplistController@index');
