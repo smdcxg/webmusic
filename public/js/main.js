@@ -50,6 +50,7 @@ $(function() {
     mutex: true,
     listmaxheight: '400px',
     theme: '#333',
+    showlrc: 3,
     music: [{
         title: 'Preparation',
         author: 'Hans Zimmer/Richard Harvey',
@@ -68,6 +69,7 @@ $(function() {
       id: data.resId,
       pic: data.resPic+'?param=66y66',
       url: 'http://music.163.com/song/media/outer/url?id='+data.resId+'.mp3',
+      lrc: '/lyric/'+data.resId+'.lrc',
     }];
      var repeat_index = 0;
      var index = ap.option.music.length;

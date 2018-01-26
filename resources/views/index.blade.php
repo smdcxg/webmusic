@@ -171,8 +171,14 @@
                         <ul class="submenu" style="display: block;">
                             <li data-href="/discover"><span class="cus"></span><i class="fa fa-music" style="color: #595959;"></i><a href="javascript:;">发现音乐</a></li>
                             <li data-href="/private_fm"><span class="cus"></span><i class="fa fa-headphones" style="color: #595959;"></i><a href="javascript:;">私人FM</a></li>
-                            <li data-href="/user_playlist"><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>创建的歌单</a></li>
                             <li><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>Maquetacion web</a></li>
+                            <div id="user_playlist" style="padding-top: 50px;padding-bottom: 20px">
+                                <div id="up_nav_top" style="padding-left: 10px;color: #666"><span>创建的歌单<span><span>&nbsp;</span></div>
+                                <div id="up_nav_list" style="padding-top: 10px">
+                                    <em style="text-align: center;color: #aaa">暂时没有歌单</em>
+                                </div>
+                            </div>
+                            
                         </ul>
                     </li>
                     <li>
@@ -230,8 +236,8 @@
                   <p><input type="text" class="form-control" name="phone" placeholder="输入手机号" required="" autofocus="" /></p>
                   <p><input type="password" class="form-control" name="password" placeholder="输入密码" required=""/></p>
                   <p><input type="checkbox" value="1" id="rememberLogin" name="rememberLogin"> 记住密码</p>
-				  <p>&nbsp;</p> 
-                  <p style="padding: 0px 40px 0px 40px"><button class="btn btn-warning btn-block" type="submit">登录</button></p>
+				  <p id="login_error">&nbsp;</p> 
+                  <p style="padding: 0px 40px 0px 40px"><button id="login_button" class="btn btn-warning btn-block" type="submit">登录</button></p>
                 </form>
             </div>
         </div>
@@ -240,10 +246,12 @@
     </div>
    <link rel="stylesheet" href="/public/css/play-wrapper.css">
     <div class="foot" style="height:68px;background-color: #f3f3f3">
-        <div id="aplayer1" class="aplayer" style="margin:0px"></div>
+        <div id="aplayer1" class="aplayer" style="margin:0px">
+        </div>
     </div>
 </body>
 <script>
+window.login_info = {!! $login_info?$login_info:'undefined' !!};
 $("#login").draggable({
 	handle: ".login-title" ,
 	containment: "body",
@@ -270,6 +278,9 @@ function form_list(e){
 	return d;
 }
 function ajaxSubmit(e){
+    $('#login_error').html('&nbsp;');
+    $('#login_button').attr("disabled",'disabled');
+    $('#login_button').html('登录中...');
 	var data = {};
 	data = form_list(e);
 	$.ajax({
@@ -278,19 +289,54 @@ function ajaxSubmit(e){
 		type: 'POST',
 		dataType: 'JSON',
 		success: function (data){
+            $('#login_button').removeAttr("disabled");
+            $('#login_button').html('登录');
 			if(data.code === 200){
 				login_win_action(0);
-				var profile = data.profile;
-				var html = '<div class="lwm-head"><img width="50px" height="60px" src="'+profile.avatarUrl+'?param=50y60" /></div>';
-				html += '<div class="lwm-name">'+profile.nickname+'</div>';
-				$('#login_info').html(html);
+				login_op(data);
 			}else{
-                
+                $('#login_error').html('<span style="color: red">登录失败!账号或密码错误.</span>')
             }
-		}
+		},
+        error: function (){
+            $('#login_button').removeAttr("disabled");
+            $('#login_button').html('登录');
+            $('#login_error').html('<span style="color: red">错误请刷新页面!</span>')
+        }
 	});
 	return false;
 }
+function set_user_playlist(uid){      //  获取创建的歌单
+    $.ajax({
+        url: '/user_playlist/'+uid,
+        type: 'POST',
+        data: {uid: uid},
+        dataType: 'JSON',
+        success: function (data){
+            console.log(data);
+            if(data.code === 200){
+                var html = '';
+                $.each(data['playlist'], function (){
+                    html += '<li data-href="/playlist?id='+this.id+'"><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>'+this.name+'</a></li>';
+                });
+                
+                $('#up_nav_list').html(html);
+            }
+        }
+    });
+}
+function login_op(data){   // 设置登录信息
+    if(!data){
+        return -1;
+    }
+    set_user_playlist(data.account.id);
+    
+    let profile = data.profile;
+    let html = '<div class="lwm-head"><img width="50px" height="60px" src="'+profile.avatarUrl+'?param=50y60" /></div>';
+    html += '<div class="lwm-name">'+profile.nickname+'</div>';
+    $('#login_info').html(html);
+}
+login_op(login_info);
 //http://www.runningcoder.org/jquerytypeahead/documentation/
 $.typeahead({
     input: ".js-typeahead",
@@ -309,7 +355,7 @@ $.typeahead({
         }
     },
     dynamic: true,
-    delay: 300,
+    delay: 500,
     minLength: 1,
 });
 </script>

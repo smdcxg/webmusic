@@ -4,19 +4,20 @@
 .private-fm {
     width: 100%;
     height: 100%;
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .pf-l {
     float: left;
     width: 350px;
     height: 100%;
-    
+    padding-top: 70px;
 }
 .pf-r {
     float: left;
     width: calc(100% - 350px - 10px);
     height: calc(100% -10px);
-    padding: 5px;
+    padding: 35px 0px 0px 30px;
 }
 .pf-title span{
     margin-left: 10px;
@@ -24,6 +25,8 @@
 .pf-cover {
     width: 100%;
     height: 350px;
+}
+.pf-cover img{
     border: 1px solid #e2e2e2;
 }
 .pf-component {
@@ -72,7 +75,7 @@
     </div>
     <div class="pf-r">
         <div class="pf-title">
-            <span id="pf_music_name"></span>
+            <span id="pf_music_name" style="font-size: 28px;display: block; width: 100%;"></span>
             <span id="pf_music_artists"></span>
             <span id="pf_music_album"></span>
             <!--span id="pf_music_name"></span-->
@@ -88,7 +91,7 @@ fm.index = 0;
 fm.next = function (){
     if(fm.list[fm.index]){
         $('#pf_cover img').attr('src', fm.list[fm.index].album.blurPicUrl+'?param=350y350');
-        $('#pf_music_name').html('歌曲：'+fm.list[fm.index].name);
+        $('#pf_music_name').html(fm.list[fm.index].name);
         $('#pf_music_artists').html('歌手：'+fm.list[fm.index].artists[0].name);
         $('#pf_music_album').html('专辑：'+fm.list[fm.index].album.name);
         setAddMusic({resName:fm.list[fm.index].name, resArname:fm.list[fm.index].artists[0].name, resId:fm.list[fm.index].id, resPic: fm.list[fm.index].album.blurPicUrl});

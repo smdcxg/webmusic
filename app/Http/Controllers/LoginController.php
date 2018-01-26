@@ -14,7 +14,7 @@ class LoginController extends Controller
 		}
 		$ajax_data = $request->all();
         $key = 'login';
-        $minute = 60 * 24;
+        $minute = 60 * 2;
         $cache = Cache::store('redis');
         $redisData = $cache->get($key);
         if($redisData){

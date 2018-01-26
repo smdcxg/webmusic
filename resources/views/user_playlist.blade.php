@@ -3,7 +3,7 @@
 <body>
 <ul>
 @foreach ($data['playlist'] as $k=>$one)
-<li>{{$one['tags']['name']}}</li>
+<li>{{$one['name']}}</li>
 @endforeach
 </ul>
 </body>

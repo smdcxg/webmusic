@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 
 class UserPlaylistController extends Controller
 {
-    public function index(Request $request){
+    public function index($uid){
 
         $key = 'userPlaylist';
         $minute = 60;
@@ -17,12 +17,12 @@ class UserPlaylistController extends Controller
         if($redisData){
             $ret = json_decode(gzuncompress($redisData), true);
         }else{
-            $ret = \Php_Ppython::ppython("netease::user_playlist", $request->session()->get('uid'));
+            $ret = \Php_Ppython::ppython("netease::user_playlist", isset($uid)?$uid:$request->session()->get('uid'));
             if($ret['code'] === 200){
                 $cache->put($key, gzcompress(json_encode($ret), 6), $minute);
             }
         }
-        return view('user_playlist', ['data'=>$ret]);
+        return $ret;
     }
     
 }

@@ -8,6 +8,10 @@
                 min-width: 830px;
                 padding: 20px;
             }
+            .playlist {
+                width: 100%;
+                float: left;
+            }
             .discover .playlist li{
                 float: left;
                 width: calc(25% - 20px);
