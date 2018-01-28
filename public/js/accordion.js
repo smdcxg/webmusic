@@ -1,4 +1,4 @@
-$(function() {
+$(function (){
 	var Accordion = function(el, multiple) {
 		this.el = el || {};
 		this.multiple = multiple || false;
@@ -32,7 +32,15 @@ $(function() {
 				}
 			}
 		}
-	}	
-
-	var accordion = new Accordion($('#accordion'), false);
+	}
+	Accordion.prototype.re = function (){    // 重新绑定
+		// Variables privadas
+		var links = this.el.find('.link');
+		var submenu = this.el.find('.submenu li');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple, ms:false}, this.dropdown)
+		submenu.on('click', {el: this.el, multiple: this.multiple, ms:true}, this.dropdown)
+	}
+	
+	window.accordion = new Accordion($('#accordion'), false);
 });

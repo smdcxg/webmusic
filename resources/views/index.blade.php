@@ -317,10 +317,11 @@ function set_user_playlist(uid){      //  获取创建的歌单
             if(data.code === 200){
                 var html = '';
                 $.each(data['playlist'], function (){
-                    html += '<li data-href="/playlist?id='+this.id+'"><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>'+this.name+'</a></li>';
+                    html += '<li data-href="/playlist?id='+this.id+'"><a href="javascript:;"><span class="cus"></span><i class="fa" style="color: #595959;"></i>'+this.name.replace(this.creator.nickname,"")+'</a></li>';
                 });
                 
                 $('#up_nav_list').html(html);
+				accordion.re();	  // 刷新重新绑定列表
             }
         }
     });

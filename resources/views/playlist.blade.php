@@ -5,6 +5,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>播放</th>
       <th>曲歌标题</th>
       <th>时长</th>
       <th>歌手</th>
@@ -40,11 +41,11 @@ function MillisecondToDate(msd) {
 table_html = '';
 $.each(playlist, function (){
     table_html += '<tr>';
-    table_html += '<td><span data-res-id="'+this.pv.id+'" data-res-action="play" data-res-alname="'+this.al.name+'" data-res-arname="'+this.ar[0].name+'" href="javascript:;" class="netease-play netease-bg"></span></td>';
-    table_html += '<td>' + this.al.name + '</td>';
+    table_html += '<td><span data-res-id="'+this.pv.id+'" data-res-action="play" data-res-name="'+this.name+'" data-res-alname="'+this.al.name+'" data-res-arname="'+this.ar[0].name+'" data-res-pic="'+this.al.picUrl+'" href="javascript:;" class="netease-play netease-bg"></span></td>';
+    table_html += '<td>' + this.name + '</td>';
     table_html += '<td>' + MillisecondToDate(this.dt) + '</td>';
     table_html += '<td>' + this.ar[0].name + '</td>';
-    table_html += '<td>' + this.name + '</td>';
+    table_html += '<td>' + this.al.name + '</td>';
     table_html += '</tr>';
 });
 $('#table_con').html(table_html);
